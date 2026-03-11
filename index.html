@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Madam Ji ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="hearts-container" aria-hidden="true"></div>
+
+    <header class="hero">
+      <p class="pre-title">For Madam Ji • 16 March</p>
+      <h1>Happy Birthday, My Love 💖</h1>
+      <p class="hero-message">
+        You are my favorite notification, my safest home, and my happiest memory.
+      </p>
+    </header>
+
+    <main>
+      <section class="card" id="slideshow-section">
+        <h2>Our Beautiful Memories 📸</h2>
+        <div class="slideshow-wrapper">
+          <img id="slideshow-image" src="images/photo1.jpg" alt="Our memory slideshow" />
+          <div class="slideshow-overlay">
+            <span id="slide-counter">1 / 5</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="countdown-section">
+        <h2>Countdown to 16 March ⏳</h2>
+        <div class="countdown" id="countdown" role="timer" aria-live="polite">
+          <div><strong id="days">0</strong><span>Days</span></div>
+          <div><strong id="hours">0</strong><span>Hours</span></div>
+          <div><strong id="minutes">0</strong><span>Minutes</span></div>
+          <div><strong id="seconds">0</strong><span>Seconds</span></div>
+        </div>
+      </section>
+
+      <section class="card timeline">
+        <h2>Our Timeline 🗓️</h2>
+        <ul>
+          <li><span>2 March 2024</span> — First Meeting</li>
+          <li><span>3 March 2024</span> — First Chat on Instagram</li>
+          <li><span>6 March 2024</span> — First Call</li>
+          <li><span>7 March 2024</span> — Last Time We Met</li>
+        </ul>
+      </section>
+
+      <section class="card gift">
+        <h2>Your Gift Box 🎁</h2>
+        <button id="gift-button" aria-expanded="false" aria-controls="gift-message">Open Surprise</button>
+        <p id="gift-message" hidden>
+          You are the best thing that ever happened to me. Thank you for being you. 🌹
+        </p>
+      </section>
+
+      <section class="card letter">
+        <h2>Love Letter ✍️</h2>
+        <p id="typing-text"></p>
+      </section>
+
+      <section class="card secret">
+        <h2>Secret Message 🔐</h2>
+        <button id="secret-button">Reveal Secret</button>
+        <p id="secret-text" hidden>In every lifetime, I will choose you first.</p>
+      </section>
+    </main>
+
+    <audio id="bg-music" src="music.mp3" loop></audio>
+    <button id="music-toggle" class="floating-btn" aria-label="Toggle romantic music">▶ Music</button>
+
+    <canvas id="fireworks" aria-hidden="true"></canvas>
+
+    <script src="script.js"></script>
+  </body>
+</html>
