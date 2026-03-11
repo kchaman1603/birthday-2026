@@ -1,0 +1,181 @@
+:root {
+  --bg: #120016;
+  --bg-soft: #241029;
+  --text: #fff7fc;
+  --accent: #ff4f87;
+  --accent-soft: #ffb3d0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #3a0e47, var(--bg));
+  overflow-x: hidden;
+}
+
+#hearts-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.heart {
+  position: absolute;
+  bottom: -20px;
+  color: #ff7da9;
+  animation: floatUp linear forwards;
+  opacity: 0.8;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+.hero,
+main {
+  position: relative;
+  z-index: 2;
+}
+
+.hero {
+  text-align: center;
+  padding: 3.5rem 1rem 1rem;
+}
+
+h1,
+h2 {
+  font-family: "Dancing Script", cursive;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  margin: 0.4rem 0;
+}
+
+.pre-title {
+  color: var(--accent-soft);
+  margin: 0;
+}
+
+.hero-message {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+main {
+  width: min(980px, 92%);
+  margin: 0 auto 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: rgba(36, 16, 41, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 1rem;
+  backdrop-filter: blur(6px);
+}
+
+#slideshow-section,
+#countdown-section {
+  grid-column: 1 / -1;
+}
+
+.slideshow-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#slideshow-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: linear-gradient(130deg, #ff4f87, #6f6eff);
+}
+
+.slideshow-overlay {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.7rem;
+}
+
+.countdown div {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.7rem;
+  border-radius: 10px;
+}
+
+.countdown strong {
+  font-size: 1.5rem;
+  display: block;
+}
+
+.timeline ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.timeline li span {
+  color: var(--accent-soft);
+  font-weight: 600;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#gift-message,
+#secret-text,
+#typing-text {
+  margin-top: 0.9rem;
+  line-height: 1.6;
+}
+
+.floating-btn {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 3;
+}
+
+#fireworks {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
